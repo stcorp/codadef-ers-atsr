@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ATS_TOA_1P_ADSR_sa_aatsr_rec_data" last-modified="2011-01-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Nadir UTC time in MJD format</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag(set to 1 if all MDSRs corresponding to this ADSR are blank, set to 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="img_scan_y">
+    <cd:Integer>
+      <cd:Description>image scan y coordinate</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tie_pt_sol_elev">
+    <cd:Array>
+      <cd:Description>tie point solar elevation</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mdegrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tie_pt_sat_elev_nad">
+    <cd:Array>
+      <cd:Description>tie point satellite elevation nadir</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mdegrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tie_pt_sol_az">
+    <cd:Array>
+      <cd:Description>tie point solar azimuth</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mdegrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tie_pt_sat_azi">
+    <cd:Array>
+      <cd:Description>tie point satellite azimuth</cd:Description>
+      <cd:Dimension>11</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>mdegrees</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000.000000">
+          <cd:Unit>degrees</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>20*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

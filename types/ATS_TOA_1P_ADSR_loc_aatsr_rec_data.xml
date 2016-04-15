@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ATS_TOA_1P_ADSR_loc_aatsr_rec_data" last-modified="2011-01-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Nadir UTC time in MJD format</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag(set to 1 if all MDSRs corresponding to this ADSR are blank, set to 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="img_scan_y">
+    <cd:Integer>
+      <cd:Description>image scan y coordinate</cd:Description>
+      <cd:Unit>m</cd:Unit>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="tie_pt_lat">
+    <cd:Array>
+      <cd:Description>tie point latitudes</cd:Description>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="tie_pt_long">
+    <cd:Array>
+      <cd:Description>tie point longitudes</cd:Description>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lat_corr_nadv">
+    <cd:Array>
+      <cd:Description>latitude corrections, nadir view</cd:Description>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="long_corr_nadv">
+    <cd:Array>
+      <cd:Description>longitude corrections, nadir view</cd:Description>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="lat_corr_forv">
+    <cd:Array>
+      <cd:Description>latitude corrections, forward view</cd:Description>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_north</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_north</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="long_corr_forv">
+    <cd:Array>
+      <cd:Description>longitude corrections, forward view</cd:Description>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>1e-6 degrees_east</cd:Unit>
+        <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+          <cd:Unit>degrees_east</cd:Unit>
+        </cd:Conversion>
+        <cd:BitSize>32</cd:BitSize>
+        <cd:NativeType>int32</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="topo_alt">
+    <cd:Array>
+      <cd:Description>Topographic Altitude</cd:Description>
+      <cd:Dimension>23</cd:Dimension>
+      <cd:Integer>
+        <cd:Unit>metres</cd:Unit>
+        <cd:BitSize>16</cd:BitSize>
+        <cd:NativeType>int16</cd:NativeType>
+      </cd:Integer>
+    </cd:Array>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>8*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

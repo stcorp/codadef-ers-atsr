@@ -1,0 +1,895 @@
+<?xml version="1.0"?>
+<cd:Record format="binary" name="ATS_AR__2P_MDSR_sr_large_aatsr_rec_data" last-modified="2011-01-25" xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Nadir UTC time in MJD format</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="quality_flag">
+    <cd:Integer>
+      <cd:Description>Quality Indicator (-1 for blank MDSR, 0 otherwise)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="lat">
+    <cd:Integer>
+      <cd:Description>Latitude of cell</cd:Description>
+      <cd:Unit>1e-6 degrees_north</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_north</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="lon">
+    <cd:Integer>
+      <cd:Description>Longitude of cell</cd:Description>
+      <cd:Unit>1e-6 degrees_east</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000000.000000">
+        <cd:Unit>degrees_east</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="m_actrk_pix_num">
+    <cd:Integer>
+      <cd:Description>Mean across-track pixel number</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pix_nad">
+    <cd:Integer>
+      <cd:Description>Number of filled pixels in cell, nadir view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pix_ss_nad">
+    <cd:Integer>
+      <cd:Description>Number of filled pixels in cell over sea surface, nadir view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="clpix_ss_nad">
+    <cd:Integer>
+      <cd:Description>Percentage of cloudy pixels in cell over sea surface, nadir view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_12bt_clr_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 12 micron BT of all clear pixels (nadir view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_12bt_clr_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_11bt_clr_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 11 micron BT of all clear pixels (nadir view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_11bt_clr_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_37bt_clr_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 3.7 micron BT of all clear pixels (nadir view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_37bt_clr_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_16toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 1.6 micron TOA reflectance of all clear pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_16toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_87toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.87 micron TOA reflectance of all clear pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_87toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_67toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.67 micron TOA reflectance of all clear pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_67toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_55toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.55 micron TOA reflectance of all clear pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_55toa_clr_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_12bt_cl_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 12 micron BT of all cloudy pixels (nadir view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_12bt_cl_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_11bt_cl_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 11 micron BT of all cloudy pixels (nadir view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_11bt_cl_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_37bt_cl_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 3.7 micron BT of all cloudy pixels (nadir view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_37bt_cl_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_16toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 1.6 micron TOA reflectance of all cloudy pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_16toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_87toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.87 micron TOA reflectance of all cloudy pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_87toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_67toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.67 micron TOA reflectance of all cloudy pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_67toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_55toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.55 micron TOA reflectance of all cloudy pixels (nadir view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_55toa_cl_nad">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fail_flag_nad">
+    <cd:Integer>
+      <cd:Description>Pixel threshold failure flags for averages, nadir view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pix_for">
+    <cd:Integer>
+      <cd:Description>Number of filled pixels in cell, forward view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pix_ss_for">
+    <cd:Integer>
+      <cd:Description>Number of filled pixels in cell over sea surface, forward view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="perc_cl_pix_ss_for">
+    <cd:Integer>
+      <cd:Description>Percentage of cloudy pixels in cell over sea surface, forward view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_12bt_clr_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 12 micron BT of all clear pixels (forward view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_12bt_clr_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_11bt_clr_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 11 micron BT of all clear pixels (forward view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_11bt_clr_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_37bt_clr_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 3.7 micron BT of all clear pixels (forward view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_37bt_clr_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_16toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 1.6 micron TOA reflectance of all clear pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_16toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_87toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.87 micron TOA reflectance of all clear pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_87toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_67toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.67 micron TOA reflectance of all clear pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_67toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_55toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.55 micron TOA reflectance of all clear pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_55toa_clr_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_12bt_cl_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 12 micron BT of all cloudy pixels (forward view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_12bt_cl_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_11bt_cl_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 11 micron BT of all cloudy pixels (forward view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_11bt_cl_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_37bt_cl_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 3.7 micron BT of all cloudy pixels (forward view)</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_37bt_cl_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>K/1000</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="1000.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_16toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 1.6 micron TOA reflectance of all cloudy pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_16toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_87toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.87 micron TOA reflectance of all cloudy pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_87toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_67toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.67 micron TOA reflectance of all cloudy pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_67toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sa_55toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Spatially averaged 0.55 micron TOA reflectance of all cloudy pixels (forward view)</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_55toa_cl_for">
+    <cd:Integer>
+      <cd:Description>Standard deviation of above</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="fail_flag_for">
+    <cd:Integer>
+      <cd:Description>Pixel threshold failure flags for averages, forward view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>uint16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pix_nsig_nad">
+    <cd:Integer>
+      <cd:Description>Number of filled pixels (N-Sigma), nadir view</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="pix_ss">
+    <cd:Integer>
+      <cd:Description>Percentage filled pixels over sea surface</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="low_11bt_cl_nad">
+    <cd:Integer>
+      <cd:Description>Lowest 11 micron BT of all cloudy pixels, nadir view</cd:Description>
+      <cd:Unit>K/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_12bt_nad">
+    <cd:Integer>
+      <cd:Description>Corresponding 12 micron BT, nadir view</cd:Description>
+      <cd:Unit>K/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_37bt_nad">
+    <cd:Integer>
+      <cd:Description>Corresponding 3.7 micron BT, nadir view</cd:Description>
+      <cd:Unit>K/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_16ref_nad">
+    <cd:Integer>
+      <cd:Description>Corresponding 1.6 micron reflectance, nadir view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_87ref_nad">
+    <cd:Integer>
+      <cd:Description>Corresponding 0.87 micron reflectance, nadir view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_67ref_nad">
+    <cd:Integer>
+      <cd:Description>Corresponding 0.67 micron reflectance, nadir view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_55ref_nad">
+    <cd:Integer>
+      <cd:Description>Corresponding 0.55 micron reflectance, nadir view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="low_11bt_cl_for">
+    <cd:Integer>
+      <cd:Description>Lowest 11 micron BT of all cloudy pixels, forward view</cd:Description>
+      <cd:Unit>K/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_12bt_for">
+    <cd:Integer>
+      <cd:Description>Corresponding 12 micron BT, forward view</cd:Description>
+      <cd:Unit>K/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_37bt_for">
+    <cd:Integer>
+      <cd:Description>Corresponding 3.7 micron BT, forward view</cd:Description>
+      <cd:Unit>K/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>K</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_16ref_for">
+    <cd:Integer>
+      <cd:Description>Corresponding 1.6 micron reflectance, forward view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_87ref_for">
+    <cd:Integer>
+      <cd:Description>Corresponding 0.87 micron reflectance, forward view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_67ref_for">
+    <cd:Integer>
+      <cd:Description>Corresponding 0.67 micron reflectance, forward view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="corr_55ref_for">
+    <cd:Integer>
+      <cd:Description>Corresponding 0.55 micron reflectance, forward view</cd:Description>
+      <cd:Unit>%/100</cd:Unit>
+      <cd:Conversion numerator="1.000000" denominator="100.000000">
+        <cd:Unit>%</cd:Unit>
+      </cd:Conversion>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+</cd:Record>

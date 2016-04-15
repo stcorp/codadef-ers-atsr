@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<cd:ProductDefinition xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" id="AT2_NR__2P" format="binary" last-modified="2011-07-02">
+  <cd:Record format="binary">
+    <cd:Field name="mph">
+      <cd:NamedType id="MPH"/>
+    </cd:Field>
+    <cd:Field name="sph">
+      <cd:NamedType id="AATSR_SPH_long"/>
+    </cd:Field>
+    <cd:Field name="dsd">
+      <cd:Array format="ascii">
+        <cd:Dimension><![CDATA[$num_dsd]]></cd:Dimension>
+        <cd:NamedType id="DSD"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="summary_quality_ads">
+      <cd:Array>
+        <cd:Description>Summary Quality ADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[0]]]></cd:Dimension>
+        <cd:NamedType id="ATS_NR__2P_ADSR_sq_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="geolocation_ads">
+      <cd:Array>
+        <cd:Description>Grid pixel latitude and longtitude  topographic corrections ADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[1]]]></cd:Dimension>
+        <cd:NamedType id="ATS_TOA_1P_ADSR_loc_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="scan_pixel_x_and_y_ads">
+      <cd:Array>
+        <cd:Description>Scan pixel x and y ADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[2]]]></cd:Dimension>
+        <cd:NamedType id="ATS_TOA_1P_ADSR_scan_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="nadir_view_solar_angles_ads">
+      <cd:Array>
+        <cd:Description>Nadir view solar angles ADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[3]]]></cd:Dimension>
+        <cd:NamedType id="ATS_TOA_1P_ADSR_sa_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="fward_view_solar_angles_ads">
+      <cd:Array>
+        <cd:Description>Forward view solar angles ADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[4]]]></cd:Dimension>
+        <cd:NamedType id="ATS_TOA_1P_ADSR_sa_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="nadir_view_scan_pix_num_ads">
+      <cd:Array>
+        <cd:Description>Scan and pixel number nadir view ADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[5]]]></cd:Dimension>
+        <cd:NamedType id="ATS_TOA_1P_ADSR_pix_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="fward_view_scan_pix_num_ads">
+      <cd:Array>
+        <cd:Description>Scan and pixel number forward view ADS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[6]]]></cd:Dimension>
+        <cd:NamedType id="ATS_TOA_1P_ADSR_pix_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+    <cd:Field name="distrib_sst_cloud_land_mds">
+      <cd:Array>
+        <cd:Description>Distributed product MDS</cd:Description>
+        <cd:Dimension><![CDATA[$num_dsr[7]]]></cd:Dimension>
+        <cd:NamedType id="ATS_NR__2P_MDSR_dp_aatsr_rec_data"/>
+      </cd:Array>
+    </cd:Field>
+  </cd:Record>
+  <cd:ProductVariable name="num_dsd">
+    <cd:Init><![CDATA[$num_dsd = int(/mph/num_dsd)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_ds">
+    <cd:Init><![CDATA[$num_ds = 8]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_to_dsd_index">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[$ds_to_dsd_index[0] = index(/dsd, str(./ds_name) == "SUMMARY_QUALITY_ADS         "); $ds_to_dsd_index[1] = index(/dsd, str(./ds_name) == "GEOLOCATION_ADS             "); $ds_to_dsd_index[2] = index(/dsd, str(./ds_name) == "SCAN_PIXEL_X_AND_Y_ADS      "); $ds_to_dsd_index[3] = index(/dsd, str(./ds_name) == "NADIR_VIEW_SOLAR_ANGLES_ADS "); $ds_to_dsd_index[4] = index(/dsd, str(./ds_name) == "FWARD_VIEW_SOLAR_ANGLES_ADS "); $ds_to_dsd_index[5] = index(/dsd, str(./ds_name) == "NADIR_VIEW_SCAN_PIX_NUM_ADS "); $ds_to_dsd_index[6] = index(/dsd, str(./ds_name) == "FWARD_VIEW_SCAN_PIX_NUM_ADS "); $ds_to_dsd_index[7] = index(/dsd, str(./ds_name) == "DISTRIB_SST_CLOUD_LAND_MDS  ")]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_available">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_available[i] = if($ds_to_dsd_index[i] != -1 && !(bytes(/dsd[$ds_to_dsd_index[i]]/filename, 8) == "NOT USED"), 1, 0)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="ds_offset">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $ds_offset[i] = 8 * int(/dsd[$ds_to_dsd_index[i]]/ds_offset)]]></cd:Init>
+  </cd:ProductVariable>
+  <cd:ProductVariable name="num_dsr">
+    <cd:Dimension><![CDATA[$num_ds]]></cd:Dimension>
+    <cd:Init><![CDATA[for i = 0 to $num_ds - 1 do $num_dsr[i] = int(/dsd[$ds_to_dsd_index[i]]/num_dsr)]]></cd:Init>
+  </cd:ProductVariable>
+</cd:ProductDefinition>

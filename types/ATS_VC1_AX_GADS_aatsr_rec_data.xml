@@ -1,0 +1,223 @@
+<?xml version="1.0"?>
+<cd:Record xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" format="binary" name="ATS_VC1_AX_GADS_aatsr_rec_data" last-modified="2010-08-26">
+  <cd:Field name="dsr_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>Time of cal in MJD format</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="attach_flag">
+    <cd:Integer>
+      <cd:Description>Attachment flag (always set to zero for this flag)</cd:Description>
+      <cd:BitSize>8</cd:BitSize>
+      <cd:NativeType>int8</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_1">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>24</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+  <cd:Field name="slp_16_mic">
+    <cd:Integer>
+      <cd:Description>1.6 micron slope</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slp_087_mic">
+    <cd:Integer>
+      <cd:Description>0.870 micron slope</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slp_067_mic">
+    <cd:Integer>
+      <cd:Description>0.670 micron slope</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="slp_055_mic">
+    <cd:Integer>
+      <cd:Description>0.555 micron slope</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="asc_time">
+    <cd:Time timeformat="binary_envisat_datetime">
+      <cd:Description>UTC at ascending node crossing, in MJD format</cd:Description>
+    </cd:Time>
+  </cd:Field>
+  <cd:Field name="ave_mon_cnt">
+    <cd:Integer>
+      <cd:Description>Average Monitor count</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sd_mon_cnt">
+    <cd:Integer>
+      <cd:Description>Standard deviation of Monitor count</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_irr_16">
+    <cd:Integer>
+      <cd:Description>Solar irradiance (1.6 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_irr_087">
+    <cd:Integer>
+      <cd:Description>Solar irradiance (0.87 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_irr_067">
+    <cd:Integer>
+      <cd:Description>Solar irradiance (0.670 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="sol_irr_055">
+    <cd:Integer>
+      <cd:Description>Solar irradiance (0.55 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_vispix_16">
+    <cd:Integer>
+      <cd:Description>Average VISCAL Pixel Counts (1.6 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_vispix_087">
+    <cd:Integer>
+      <cd:Description>Average VISCAL Pixel Counts (0.87 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_vispix_067">
+    <cd:Integer>
+      <cd:Description>Average VISCAL Pixel Counts (0.67 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_vispix_055">
+    <cd:Integer>
+      <cd:Description>Average VISCAL Pixel Counts (0.55 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vis_pixnois_16">
+    <cd:Integer>
+      <cd:Description>VISCAL Pixel Noise (1.6 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vis_pixnois_087">
+    <cd:Integer>
+      <cd:Description>VISCAL Pixel Noise (0.87 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vis_pixnois_067">
+    <cd:Integer>
+      <cd:Description>VISCAL Pixel Noise (0.67 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="vis_pixnois_055">
+    <cd:Integer>
+      <cd:Description>VISCAL Pixel Noise (0.55 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_xbb_16">
+    <cd:Integer>
+      <cd:Description>Average -X BB Pixel Counts (1.6 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_xbb_087">
+    <cd:Integer>
+      <cd:Description>Average -X BB Pixel Counts (0.87 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_xbb_067">
+    <cd:Integer>
+      <cd:Description>Average -X BB Pixel Counts (0.67 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="ave_xbb_055">
+    <cd:Integer>
+      <cd:Description>Average -X BB Pixel Counts (0.55 (m)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="xbb_nois_16">
+    <cd:Integer>
+      <cd:Description>-X BB Pixel Noise (1.6 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="xbb_nois_087">
+    <cd:Integer>
+      <cd:Description>-X BB Pixel Noise (0.87 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="xbb_nois_067">
+    <cd:Integer>
+      <cd:Description>-X BB Pixel Noise (0.67 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="xbb_nois_055">
+    <cd:Integer>
+      <cd:Description>-X BB Pixel Noise (0.55 micron)</cd:Description>
+      <cd:BitSize>32</cd:BitSize>
+      <cd:NativeType>int32</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="parity_char">
+    <cd:Integer>
+      <cd:Description>(Reserved for parity indicator)</cd:Description>
+      <cd:BitSize>16</cd:BitSize>
+      <cd:NativeType>int16</cd:NativeType>
+    </cd:Integer>
+  </cd:Field>
+  <cd:Field name="spare_2">
+    <cd:Raw>
+      <cd:Description>Spare</cd:Description>
+      <cd:BitSize>20*8</cd:BitSize>
+    </cd:Raw>
+    <cd:Hidden/>
+  </cd:Field>
+</cd:Record>

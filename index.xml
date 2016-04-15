@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<cd:ProductClass xmlns:cd="http://www.stcorp.nl/coda/definition/2008/07" name="ERS_ATSR" last-modified="2011-09-23">
+  <cd:Description>ERS-1 and ERS-2 ATSR products</cd:Description>
+  <cd:ProductType name="AT1_TOA_1P">
+    <cd:Description>ERS-1 ATSR Level 1B Gridded Brightness Temperature and Reflectance (GBTR) product</cd:Description>
+    <cd:ProductDefinition id="AT1_TOA_1P" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/K of the ENVISAT AATSR product specification PO-RS-MDA-GS-2009 Vol7</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AT1_TOA_1P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AT2_TOA_1P">
+    <cd:Description>ERS-2 ATSR Level 1B Gridded Brightness Temperature and Reflectance (GBTR) product</cd:Description>
+    <cd:ProductDefinition id="AT2_TOA_1P" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/K of the ENVISAT AATSR product specification PO-RS-MDA-GS-2009 Vol7</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AT2_TOA_1P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AT1_NR__2P">
+    <cd:Description>ERS-1 ATSR Level 2 Gridded Sea Surface Temperature product</cd:Description>
+    <cd:ProductDefinition id="AT1_NR__2P" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/K of the ENVISAT AATSR product specification PO-RS-MDA-GS-2009 Vol7</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AT1_NR__2P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AT2_NR__2P">
+    <cd:Description>ERS-2 ATSR Level 2 Gridded Sea Surface Temperature product</cd:Description>
+    <cd:ProductDefinition id="AT2_NR__2P" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/K of the ENVISAT AATSR product specification PO-RS-MDA-GS-2009 Vol7</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AT2_NR__2P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AT1_AR__2P">
+    <cd:Description>ERS-1 ATSR Level 2 Averaged Surface Temperature (AST) product</cd:Description>
+    <cd:ProductDefinition id="AT1_AR__2P" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/K of the ENVISAT AATSR product specification PO-RS-MDA-GS-2009 Vol7</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AT1_AR__2P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+  <cd:ProductType name="AT2_AR__2P">
+    <cd:Description>ERS-2 ATSR Level 2 Averaged Surface Temperature (AST) product</cd:Description>
+    <cd:ProductDefinition id="AT2_AR__2P" format="binary" version="0">
+      <cd:Description>This definition is based on version 3/K of the ENVISAT AATSR product specification PO-RS-MDA-GS-2009 Vol7</cd:Description>
+      <cd:DetectionRule>
+        <cd:MatchData offset="0">PRODUCT=</cd:MatchData>
+        <cd:MatchData offset="9">AT2_AR__2P</cd:MatchData>
+      </cd:DetectionRule>
+    </cd:ProductDefinition>
+  </cd:ProductType>
+</cd:ProductClass>
